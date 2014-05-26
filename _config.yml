@@ -1,0 +1,9 @@
+# Site settings
+title: The Volumes Project
+port: 4200
+sass:
+    sass_dir: stylesheets/_scss
+    style: :compressed
+
+# Build settings
+markdown: kramdown
