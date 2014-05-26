@@ -6,20 +6,64 @@
       <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta name="description" content="The Volumes Project">
-      <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-      <link rel="stylesheet" href="{{ "/stylesheets/style.css" | prepend: site.baseurl }}">
+      <style type="text/css">
+        .js .flash {visibility: hidden;}
+      </style>
+      <script type="text/javascript">
+        document.documentElement.className = 'js';
+      </script>
+
+      <link rel="stylesheet" href="/stylesheets/style.css">
+      <link rel="stylesheet" href="/css/royalslider/royalslider.css">
+      <link rel="stylesheet" href="/css/cover_page/dynamic_cover.css">
+
       <script type="text/javascript" src="//use.typekit.net/mqx1zka.js"></script>
       <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+      <script src="/js/libs/jquery-1.8.3.min.js"></script>
+      <script src="/js/royalslider/jquery.royalslider.min.js"></script>
   </head>
 
     <body>
 
-    <div class="page-content">
-      <div class="wrap">
-      {{ content }}
+    <div id='maincontent' class='content_container flash'>
+            <div class='top'>
       </div>
+      <div class='bottom'>
+      </div>
+      <div class='right'>
+      </div>
+      <div class='left'>
+      </div>
+
+    {{ content }}
     </div>
+
+      <script>
+          jQuery(document).ready(function($) {
+              $(".royalSlider").royalSlider({
+            transitionType: 'fade',
+            randomizeSlides: true,
+            controlNavigation: 'none',
+            arrowsNavHideOnTouch: true,
+            arrowsNav: false,
+            loop: true,
+            transitionSpeed: 1100,
+            keyboardNavEnabled: true,
+            autoPlay: {
+              enabled: true,
+              delay: 45000
+            }
+              });
+          });
+      </script>
+
+      <script type="text/javascript">
+        window.onload = function() {
+          $("#maincontent").removeClass( "flash" ); }
+      </script>
+          <script src="/js/libs/jquery-1.8.3.min.js"></script>
 
     </body>
 </html>

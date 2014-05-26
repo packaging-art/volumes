@@ -2,3 +2,11 @@
 layout: default
 ---
 
+<div class='cover_container'>
+  <div id='your-slider-selector' class="royalSlider rsDefault">
+    {% for post in site.categories.cover %}
+    <div class='individual_slide {{post.cover_class}}'>
+    </div>
+    {% endfor %}
+  </div>
+</div>
