@@ -34,7 +34,7 @@ html, button, input, select, textarea {
 }
 
 body {
-  font-size: 1em;
+  font-size: .8em;
   margin: .4em .35em;
 }
 
@@ -83,12 +83,12 @@ a {
   -o-transition: color 0.3s ease-out, border-color 0.3s ease-out;
   -ms-transition: color 0.3s ease-out, border-color 0.3s ease-out;
   transition: color 0.3s ease-out, border-color 0.3s ease-out;
-  color: lightgray;
+  color: white;
 }
 
 
-a {color: $core_text_color;}
-a:hover {color: $link_hover_color;}
+a {color: white;}
+a:hover {color: white;}
 
 
 p a {
@@ -227,9 +227,84 @@ width: auto;
   right: 0;
 }
 
+.intro {
+  @extend .heading;
+  position: absolute;
+  width: 9em;
+  background: white;
+  left: 10%;
+  top: 0;
+  color: black;
+  z-index:11000;
+  line-height: 1;
+  font-size: 1.25em;
+  padding: .4em 1em .8em 1.1em;
+}
+
+.contact {
+  @extend .intro;
+  top: initial;
+  bottom: 1.5em;
+  color: white;
+  background: transparent;
+  padding: .85em 1em .1em 0em;
+  .tagline {
+    padding-bottom:0;
+  }
+}
+.header {
+  font-size: 1.1em;
+  line-height: .9;
+  margin-top: .4em;
+}
+.tagline {
+  padding-bottom: 6em;
+  font-size: .65em;
+}
+
 @media only screen and (min-width: 42em) {
+
+body {font-size: .9em;}
+
+  .intro {
+    width: 10em;
+  padding: .85em 1em .8em 1.1em;
+}
+.contact {padding-left: 0; padding-bottom: 0.1em;}
 
 
 .top, .bottom {height: 1em;}
 .right, .left {width: 1em; }
 }
+
+@media only screen and (min-width: 65em) {
+  body {font-size: 1em;}
+
+  .intro {
+  padding: .85em 1em .8em 1.1em;
+}
+.contact {padding-left: 0; padding-bottom: 0.1em;}
+
+}
+
+@media only screen and (min-width: 80em) {
+  body {font-size: 1.1em;}
+
+  .intro {
+  padding: .85em 1em .8em 1.1em;
+}
+.contact {padding-left: 0; padding-bottom: 0.1em;}
+
+}
+
+@media only screen and (min-width: 95em) {
+  body {font-size: 1.2em;}
+
+  .intro {
+  padding: .85em 1em .8em 1.1em;
+}
+.contact {padding-left: 0; padding-bottom: 0.2em;}
+
+}
+
+
