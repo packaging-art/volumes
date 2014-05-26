@@ -4,7 +4,7 @@ title: Cover Background Images
 
 {% for post in site.categories.cover %}
 .{{post.cover_class}} {
-	background-image: url('/img/{{post.image}}');
+	background-image: url('{{ site.baseurl }}/img/{{post.image}}');
 	background-size:cover;
 	{% if post.cover_background_position %}background-position:{{ post.cover_background_position}};{% endif %}
 }
@@ -15,7 +15,7 @@ title: Cover Background Images
 {% for post in site.categories.cover %}
 
 	.{{post.cover_class}} {
-		background-image: url('/img/2x_{{post.image}}');
+		background-image: url('{{ site.baseurl }}/img/2x_{{post.image}}');
 	}
 {% endfor %}
 
@@ -25,7 +25,7 @@ title: Cover Background Images
 {% for post in site.categories.cover %}
 
 	.{{post.cover_class}} {
-		background-image: url('/img/2x_{{post.image}}');
+		background-image: url('{{ site.baseurl }}/img/2x_{{post.image}}');
 	}
 {% endfor %}
 
