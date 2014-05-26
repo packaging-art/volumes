@@ -1,7 +1,7 @@
 # Site settings
 title: The Volumes Project
 port: 4200
-baseurl: http://designstudio.io
+baseurl: http://volumesproject.com
 sass:
     sass_dir: stylesheets/_scss
     style: :compressed
